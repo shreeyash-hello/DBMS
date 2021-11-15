@@ -20,18 +20,3 @@ if(isset($_POST['adsub'])){
 
 
 
-
-function display_docs()
-{
-	global $con;
-	$query="select * from doctb";
-	$result=mysqli_query($con,$query);
-	while($row=mysqli_fetch_array($result))
-	{
-		$name=$row['name'];
-		
-		echo '<option value="'.$name.'">'.$name.'</option>';
-	}
-}
-
-
